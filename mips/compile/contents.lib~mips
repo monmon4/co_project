@@ -1,1 +1,9 @@
-0
+345
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 1 "./../src/INST_MEM.v" 2 INST_MEM
+~A 1 "./../src/INST_MEM.v" 2 INST_MEM
+~M 3 "./../src/REG.v" 2 REG
+~A 1 "./../src/REG.v" 2 REG
+~M 3 "./../src/INST_MEM.v" 21 inst_tb
+~A 1 "./../src/INST_MEM.v" 21 inst_tb

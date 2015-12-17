@@ -2,7 +2,19 @@
 mips=1
 Built-in symbols=0
 [COMPILESTATUS|.\src\first try.v]
-FileTimeLow=30488728
-Status=Modified
+FileTimeLow=30488798
+Status=Compiled
 [CACHEDOC|Aldec.Project.Generic.7|.\mips\mips.adf|]
 Path=
+[COMPILESTATUS|.\src\REG.v]
+FileTimeLow=30488813
+Status=Modified
+[COMPILESTATUS|.\src\INST_MEM.v]
+FileTimeLow=30488813
+Status=Modified
+[COMPILESTATUS|.\src\untitled.asdb]
+FileTimeLow=30488813
+Status=Modified
+[COMPILESTATUS|.\src\untitled.awc]
+FileTimeLow=30488813
+Status=Modified
