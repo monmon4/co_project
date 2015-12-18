@@ -13,5 +13,7 @@ module REG (Read_reg1, Read_reg2, Write_reg, Write_data, Clk, Read_data1, Read_d
 	begin
 	if (Write_reg)
 		register[Write_reg] <= Write_data;		
-	end
+	end	
+	
+	
 endmodule

@@ -1,6 +1,8 @@
-421
+479
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
+~M 3 "./../src/DATA_MEM.v" 1 DATA_MEM
+~A 1 "./../src/DATA_MEM.v" 1 DATA_MEM
 ~M 1 "./../src/INST_MEM.v" 2 INST_MEM
 ~A 1 "./../src/INST_MEM.v" 2 INST_MEM
 ~M 3 "./../src/MUX.v" 2 MUX
