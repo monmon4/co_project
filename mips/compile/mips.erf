@@ -11,9 +11,10 @@ MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 MESSAGE_SP VCP2113 "Module REG found in current working library."
 MESSAGE_SP VCP2113 "Module inst_tb found in current working library."
+MESSAGE_SP VCP2113 "Module MUX found in current working library."
 UPDATEPROGRESS 90
 UPDATEPROGRESS 100
-MESSAGE "$root top modules: REG inst_tb."
+MESSAGE "$root top modules: REG inst_tb MUX."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 MESSAGE "done"

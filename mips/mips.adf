@@ -47,12 +47,12 @@ Selected=
 [Files]
 /REG.v=-1
 /INST_MEM.v=-1
-/untitled.asdb=-1
-/untitled.awc=-1
+/MUX.v=-1
 
 [Files.Data]
 .\src\REG.v=Verilog Source Code
-
 .\src\INST_MEM.v=Verilog Source Code
 .\src\untitled.asdb=Accelerated Waveform File
 .\src\untitled.awc=Accelerated Waveform Configuration
+.\src\MUX.v=Verilog Source Code
+

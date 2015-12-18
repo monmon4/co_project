@@ -1,2 +1,3 @@
 .\src\REG.v
 .\src\INST_MEM.v
+.\src\MUX.v
