@@ -49,6 +49,7 @@ Selected=
 /INST_MEM.v=-1
 /MUX.v=-1
 /DATA_MEM.v=-1
+/CONNECTION.v=-1
 
 [Files.Data]
 .\src\REG.v=Verilog Source Code
@@ -56,3 +57,4 @@ Selected=
 .\src\MUX.v=Verilog Source Code
 
 .\src\DATA_MEM.v=Verilog Source Code
+.\src\CONNECTION.v=Verilog Source Code
