@@ -14,6 +14,7 @@ MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 MESSAGE_SP VCP2113 "Module inst_tb found in current working library."
+MESSAGE_SP VCP2113 "Module try found in current working library."
 UPDATEPROGRESS 83
 UPDATEPROGRESS 86
 UPDATEPROGRESS 90
@@ -21,7 +22,7 @@ UPDATEPROGRESS 93
 UPDATEPROGRESS 96
 UPDATEPROGRESS 100
 MESSAGE "Unit top modules: CONNECTION."
-MESSAGE "$root top modules: inst_tb CONNECTION."
+MESSAGE "$root top modules: inst_tb CONNECTION try."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
 MESSAGE "done"

@@ -1,15 +1,19 @@
 module CONNECTION (Clk);
 	
 	input Clk;
+	  // very important to specify the size of the wiresssss
+	wire[31:0] pc_inst; wire [5:0] inst_control; wire[15:0] inst_signextend ;//instruction memory wires
+	wire[4:0]  inst_readreg1, inst_readreg2, inst_writereg;  //instruction memory wires
+	wire[31:0] temp; //inst.mem output	
 	
-	wire pc_inst, inst_control, inst_readreg1, inst_readreg2, inst_writereg, inst_signextend ; //instruction memory wires
-	wire[31:0] temp; //inst.mem output
-	wire mux_writereg, control_reg, datamem_reg, regread1_alu, regread2_alu; //register wires
-	wire alu_mem, readdatamem_mux, control_memread, control_memwrite; //data memory wires
+	wire[4:0] mux_writereg; wire control_reg; wire[31:0] datamem_reg, regread1_alu, regread2_alu; //register wires 
+	
+	wire[31:0] alu_mem, readdatamem_mux;  //data memory wires
+	wire control_memread, control_memwrite; //data memory wires
 	
 	INST_MEM inst_mem(pc_inst, Clk, temp);
 	
-	assign inst_control = temp[31:26];
+	assign inst_control = temp[31:26];	//all to divide the instruction
 	assign inst_readreg1 = temp[25:21];
 	assign inst_readreg2 = temp[20:16];
 	assign inst_writereg = temp[15:11];
