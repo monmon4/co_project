@@ -33,7 +33,7 @@ module CONNECTION (Clk);
 	MUX mux_inst_reg(mux_writereg, inst_readreg2, inst_writereg,reg_dst);
 	REG register(regread1_alu, regread2_alu, inst_readreg1, inst_readreg2,reg_write, mux_writereg, datamem_reg, Clk );
 	
-	ALU_CTRL alu_ctrl(aluconrol, inst_aluctrl, alu_op) ;
+	ALU_CTRL alu_ctrl(alucontrol, inst_aluctrl, alu_op) ;
 	
 	MUX mux_reg_alu (mux_aluin2, regread2_alu, signextend_alu, alusrc );
 	ALU alu (alu_mem, alu_and, regread1_alu, mux_aluin2, alucontrol) ;

@@ -1,4 +1,4 @@
-1524
+2338
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./../src/ALU.v" 1 ALU
@@ -19,5 +19,7 @@
 ~A 1 "./../src/REG.v" 2 REG
 ~M 3 "./../src/INST_MEM.v" 21 inst_tb
 ~A 1 "./../src/INST_MEM.v" 21 inst_tb
-~M 3 "./../src/try.v" 2 try
+~M 1 "./../src/try.v" 2 try
 ~A 1 "./../src/try.v" 2 try
+~M 3 "./../src/try.v" 17 try_tb
+~A 1 "./../src/try.v" 17 try_tb

@@ -1,12 +1,29 @@
 
-module try (Out);
+module try ();
 	
-	output[1:0] Out;
-	reg [1:0] temp=2'b11;
+	 reg Clk;
+	reg[31:0] temp=32'h00000000;
+	wire[31:0] instruction;
+	INST_MEM inst (instruction, temp, Clk);
+	always @(posedge Clk)
+	begin
+		temp = temp+4;
+	end	
 	
-	wire w;
 	
-	  assign w = temp;
-	 assign Out=w;
+	initial
+		begin
+			Clk=0;
+		end
+	
+		always
+			#5 Clk=!Clk;
+			
+	   initial	
+		   #100 $finish;
+	
+
 		
 endmodule
+
+			

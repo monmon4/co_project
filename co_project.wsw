@@ -14,4 +14,8 @@ TemplateId=2
 TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\CONTROL_UNIT.v|]
 TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\try.v|]
+TemplateId=2
 ActiveDocument=1
+[OPENDOC|Aldec.WaveFormASDB.7|.\mips\src/untitled.awc|]
+TemplateId=0

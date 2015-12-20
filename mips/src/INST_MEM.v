@@ -19,7 +19,7 @@ module INST_MEM (Instruction, Read_address, Clk);
 	
 	initial
 		begin
-			$readmemh("instructions.txt", the_file);
+			$readmemh("instructions.list", the_file);
 		end		
 
 endmodule
