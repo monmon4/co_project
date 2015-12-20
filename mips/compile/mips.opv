@@ -1,0 +1,1 @@
+ -erf "c:\My_Designs\co_project\mips\compile\mips.erf" -work mips -lc c:/My_Designs/co_project/library.cfg -fl c:/My_Designs/co_project/mips/projlib.cfg -o c:/My_Designs/co_project/mips/compile -l "mips" -sve   -O2

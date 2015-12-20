@@ -1,0 +1,62 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=mips
+
+[Library]
+mips=.\mips\mips.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+mips=.
+Active_lib=
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/REG.v=-1
+/INST_MEM.v=-1
+/MUX.v=-1
+/DATA_MEM.v=-1
+/CONNECTION.v=-1
+/try.v=-1
+
+[Files.Data]
+.\src\REG.v=Verilog Source Code
+.\src\INST_MEM.v=Verilog Source Code
+.\src\MUX.v=Verilog Source Code
+
+.\src\DATA_MEM.v=Verilog Source Code
+.\src\CONNECTION.v=Verilog Source Code
+.\src\try.v=Verilog Source Code

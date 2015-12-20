@@ -1,0 +1,6 @@
+.\src\REG.v
+.\src\INST_MEM.v
+.\src\MUX.v
+.\src\DATA_MEM.v
+.\src\CONNECTION.v
+.\src\try.v
