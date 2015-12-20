@@ -4,3 +4,6 @@ i<>.\src\MUX.v
 i<>.\src\DATA_MEM.v
 i<>.\src\CONNECTION.v
 i<>.\src\try.v
+i<>.\src\ALU.v
+i<>.\src\ALU_CTRL.v
+i<>.\src\CONTROL_UNIT.v

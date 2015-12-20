@@ -98,6 +98,5 @@ module ControlUnit (Op, RegWr, RegDst, MemRead, MemWrite, Aluop, Alusrc, Br, Mem
 					Br=1'b1;
 					MemToReg=1'b0;
 				end
-				end
-			endmodule
-					
+		end
+endmodule

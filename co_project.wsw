@@ -8,4 +8,10 @@ TemplateId=2
 TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\CONNECTION.v|]
 TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\ALU.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\ALU_CTRL.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\CONTROL_UNIT.v|]
+TemplateId=2
 ActiveDocument=1

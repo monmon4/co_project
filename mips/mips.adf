@@ -51,6 +51,9 @@ Selected=
 /DATA_MEM.v=-1
 /CONNECTION.v=-1
 /try.v=-1
+/ALU.v=-1
+/ALU_CTRL.v=-1
+/CONTROL_UNIT.v=-1
 
 [Files.Data]
 .\src\REG.v=Verilog Source Code
@@ -60,3 +63,6 @@ Selected=
 .\src\DATA_MEM.v=Verilog Source Code
 .\src\CONNECTION.v=Verilog Source Code
 .\src\try.v=Verilog Source Code
+.\src\ALU.v=Verilog Source Code
+.\src\ALU_CTRL.v=Verilog Source Code
+.\src\CONTROL_UNIT.v=Verilog Source Code

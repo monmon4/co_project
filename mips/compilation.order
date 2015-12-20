@@ -4,3 +4,6 @@
 .\src\DATA_MEM.v
 .\src\CONNECTION.v
 .\src\try.v
+.\src\ALU.v
+.\src\ALU_CTRL.v
+.\src\CONTROL_UNIT.v

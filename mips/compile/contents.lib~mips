@@ -1,13 +1,19 @@
-864
+1237
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
+~M 3 "./../src/ALU.v" 1 ALU
+~A 1 "./../src/ALU.v" 1 ALU
+~M 3 "./../src/ALU_CTRL.v" 1 ALU_CTRL
+~A 1 "./../src/ALU_CTRL.v" 1 ALU_CTRL
 ~M 3 "./../src/CONNECTION.v" 1 CONNECTION
 ~A 1 "./../src/CONNECTION.v" 1 CONNECTION
-~M 3 "./../src/DATA_MEM.v" 1 DATA_MEM
+~M 3 "./../src/CONTROL_UNIT.v" 1 ControlUnit
+~A 1 "./../src/CONTROL_UNIT.v" 1 ControlUnit
+~M 1 "./../src/DATA_MEM.v" 1 DATA_MEM
 ~A 1 "./../src/DATA_MEM.v" 1 DATA_MEM
 ~M 1 "./../src/INST_MEM.v" 2 INST_MEM
 ~A 1 "./../src/INST_MEM.v" 2 INST_MEM
-~M 3 "./../src/MUX.v" 2 MUX
+~M 1 "./../src/MUX.v" 2 MUX
 ~A 1 "./../src/MUX.v" 2 MUX
 ~M 1 "./../src/REG.v" 2 REG
 ~A 1 "./../src/REG.v" 2 REG
