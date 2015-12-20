@@ -1,4 +1,4 @@
-module DATA_MEM (Address, Write_data, Clk, Mem_read, Mem_write, Read_data);
+module DATA_MEM (Read_data, Address, Write_data, Clk, Mem_read, Mem_write);
 	input [31:0]Address, Write_data;
 	input Mem_read, Mem_write, Clk;
 	output [31:0] Read_data;

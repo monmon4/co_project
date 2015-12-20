@@ -11,12 +11,13 @@ UPDATEPROGRESS 27
 UPDATEPROGRESS 31
 UPDATEPROGRESS 35
 MESSAGE "Pass 2. Processing instantiations."
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol aluconrol has not been declared in module CONNECTION." "c:/My_Designs/co_project/mips/src/CONNECTION.v" 36  32
 UPDATEPROGRESS 45
 MESSAGE "Pass 3. Processing behavioral statements."
 UPDATEPROGRESS 62
 UPDATEPROGRESS 80
-MESSAGE "Parameters in case labels, will not check for overlapping labels (c:/My_Designs/co_project/mips/src/ALU.v, ln 17)."
 MESSAGE "Parameters in case labels, will not check for overlapping labels (c:/My_Designs/co_project/mips/src/ALU_CTRL.v, ln 24)."
+MESSAGE "Parameters in case labels, will not check for overlapping labels (c:/My_Designs/co_project/mips/src/ALU.v, ln 17)."
 MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
@@ -31,8 +32,8 @@ UPDATEPROGRESS 94
 UPDATEPROGRESS 96
 UPDATEPROGRESS 98
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: CONNECTION try ALU ALU_CTRL ControlUnit."
-MESSAGE "$root top modules: inst_tb CONNECTION try ALU ALU_CTRL ControlUnit."
+MESSAGE "Unit top modules: CONNECTION try."
+MESSAGE "$root top modules: inst_tb CONNECTION try."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 MESSAGE "done"

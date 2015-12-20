@@ -1,5 +1,5 @@
 
-module REG (Read_reg1, Read_reg2, Reg_write, Write_reg, Write_data, Clk, Read_data1, Read_data2); 
+module REG (Read_data1, Read_data2, Read_reg1, Read_reg2, Reg_write, Write_reg, Write_data, Clk); 
 	
 	input [4:0] Read_reg1, Read_reg2, Write_reg;
 	input [31:0] Write_data;

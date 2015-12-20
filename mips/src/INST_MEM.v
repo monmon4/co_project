@@ -1,5 +1,5 @@
 
-module INST_MEM (Read_address, Clk, Instruction);
+module INST_MEM (Instruction, Read_address, Clk);
 	
 	input [31:0] Read_address;
 	input Clk;

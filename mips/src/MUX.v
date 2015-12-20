@@ -1,5 +1,5 @@
 
-module MUX (In1, In2, Sel, Out);  
+module MUX (Out, In1, In2, Sel);  
 	
 	input In1, In2, Sel;
 	output Out;
