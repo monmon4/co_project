@@ -1,10 +1,10 @@
-module SHIFT_LEFT (Clk, Si, In5);
+module SHIFT_LEFT ( Si, In5);
 
-input In5, Clk;
-wire In5, Clk;
+input wire [31:0] In5;
+
 output reg Si;
 
-always @(posedge Clk)
+always @(In5)
 assign Si =  In5 * 2;
 
 endmodule

@@ -11,3 +11,4 @@
 .\src\AND.v
 .\src\ADD.v
 .\src\SHIFT_LEFT.v
+.\src\SIGN_EXT.v

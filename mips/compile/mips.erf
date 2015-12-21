@@ -12,13 +12,9 @@ MESSAGE_SP VCP2113 "Module \$root found in current working library."
 MESSAGE_SP VCP2113 "Module inst_tb found in current working library."
 MESSAGE_SP VCP2113 "Module CONNECTION found in current working library."
 MESSAGE_SP VCP2113 "Module try_tb found in current working library."
-MESSAGE_SP VCP2113 "Module PC found in current working library."
-MESSAGE_SP VCP2113 "Module AND found in current working library."
-MESSAGE_SP VCP2113 "Module ADD found in current working library."
 UPDATEPROGRESS 90
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: SHIFT_LEFT."
-MESSAGE "$root top modules: inst_tb CONNECTION try_tb PC AND ADD SHIFT_LEFT."
+MESSAGE "$root top modules: inst_tb CONNECTION try_tb."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 MESSAGE "done"

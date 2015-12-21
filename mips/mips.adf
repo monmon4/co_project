@@ -60,6 +60,9 @@ Selected=
 /AND.v=-1
 /ADD.v=-1
 /SHIFT_LEFT.v=-1
+/SIGN_EXT.v=-1
+/untitled1.asdb=-1
+/untitled1.awc=-1
 
 [Files.Data]
 .\src\REG.v=Verilog Source Code
@@ -77,3 +80,6 @@ Selected=
 .\src\ADD.v=Verilog Source Code
 .\src\SHIFT_LEFT.v=Verilog Source Code
 
+.\src\SIGN_EXT.v=Verilog Source Code
+.\src\untitled1.asdb=Accelerated Waveform File
+.\src\untitled1.awc=Accelerated Waveform Configuration

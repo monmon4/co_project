@@ -11,3 +11,4 @@ i<>.\src\PC.v
 i<>.\src\AND.v
 i<>.\src\ADD.v
 i<>.\src\SHIFT_LEFT.v
+i<>.\src\SIGN_EXT.v
