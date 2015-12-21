@@ -7,3 +7,7 @@
 .\src\ALU.v
 .\src\ALU_CTRL.v
 .\src\CONTROL_UNIT.v
+.\src\PC.v
+.\src\AND.v
+.\src\ADD.v
+.\src\SHIFT_LEFT.v

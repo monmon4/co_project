@@ -1,9 +1,1 @@
-"../src/CONNECTION.v"	1
-"../src/DATA_MEM.v"	1
-"../src/ALU_CTRL.v"	1
-"../src/REG.v"	1
-"../src/CONTROL_UNIT.v"	1
-"../src/try.v"	1
-"../src/ALU.v"	1
-"../src/INST_MEM.v"	1
-"../src/MUX.v"	1
+"../src/SHIFT_LEFT.v"	1

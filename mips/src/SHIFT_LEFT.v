@@ -1,4 +1,4 @@
-module SLT (Clk, Si, In5);
+module SHIFT_LEFT (Clk, Si, In5);
 
 input In5, Clk;
 wire In5, Clk;
