@@ -1,6 +1,6 @@
 module CONNECTION ();
 	
-	reg Clk;
+	reg Clk_pc, Clk_reg;
 	  // very important to specify the size of the wiresssss
 	wire[31:0] pc_inst; wire [5:0] inst_aluctrl, inst_control; wire[15:0] inst_signextend ;//instruction memory wires
 	wire[4:0]  inst_readreg1, inst_readreg2, inst_writereg;  //instruction memory wires
@@ -36,14 +36,14 @@ module CONNECTION ();
 	ControlUnit control_unit (inst_control, reg_write, reg_dst, memread, memwrite, alu_op, alusrc, branch, mem_to_reg);
 	
 	MUX_5 mux_inst_reg(mux_writereg, inst_readreg2, inst_writereg,reg_dst);
-	REG register(regread1_alu, regread2_alu, inst_readreg1, inst_readreg2,reg_write, mux_writereg, datamem_reg, Clk );
+	REG register(regread1_alu, regread2_alu, inst_readreg1, inst_readreg2,reg_write, mux_writereg, datamem_reg, Clk_reg );
 	
 	ALU_CTRL alu_ctrl(alucontrol, inst_aluctrl, alu_op) ;
 	
 	MUX_32 mux_reg_alu (mux_aluin2, regread2_alu, signextend_alu, alusrc );
 	ALU alu (alu_mem, alu_and, regread1_alu, mux_aluin2, alucontrol) ;
 	
-	DATA_MEM data_mem(readdatamem_mux, alu_mem, regread2_alu, Clk, memread, memwrite);
+	DATA_MEM data_mem(readdatamem_mux, alu_mem, regread2_alu, Clk_reg, memread, memwrite);
 	MUX_32 mux_mem_reg(datamem_reg, alu_mem, readdatamem_mux , mem_to_reg);
 	
 	/*PC Structure*/
@@ -52,13 +52,17 @@ module CONNECTION ();
 	ADD add2(add2_pc, shift_add, add1_pc); 
 	ADD add1(add1_pc, pc_inst, 4);	
 	MUX_32 mux_add_pc (mux_pc, add1_pc, add2_pc, and_muxpc );
-	PC pc(/*Clk*/, mux_pc, pc_inst);
+	PC pc(Clk_pc, mux_pc, pc_inst);
 	AND and_gate(and_muxpc, branch, alu_and);
 	
 	initial
 		begin
-		Clk = 0;
-	#10 Clk=1;											  
+		Clk_pc = 0;
+		Clk_reg=0;
+	#10 Clk_reg=1;
+	#20  Clk_pc=1;
+	#5  Clk_reg=0;
+	#5  Clk_reg=1;
 	   end
 
 endmodule

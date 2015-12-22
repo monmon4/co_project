@@ -1,5 +1,6 @@
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\REG.v|]
 TemplateId=2
+ActiveDocument=1
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\INST_MEM.v|]
 TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\MUX.v|]
@@ -14,7 +15,6 @@ TemplateId=2
 TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\SHIFT_LEFT.v|]
 TemplateId=2
-ActiveDocument=1
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\ADD.v|]
 TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\PC.v|]

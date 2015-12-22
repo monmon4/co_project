@@ -1,1 +1,1 @@
- -u "C:\Aldec\Active-HDL Student Edition\bin/systf.dll" -v2k5  "c:\My_Designs\co_project\mips\src\SHIFT_LEFT.v"  -cs  -g 5  -r -li "c:\My_Designs\co_project\mips\compile\mips.epr" -p "c:\My_Designs\co_project\mips\mips" 
+ -u "C:\Aldec\Active-HDL Student Edition\bin/systf.dll" -v2k5  "c:\My_Designs\co_project\mips\src\REG.v"  -cs  -g 5  -r -li "c:\My_Designs\co_project\mips\compile\mips.epr" -p "c:\My_Designs\co_project\mips\mips" 

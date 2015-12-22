@@ -55,7 +55,6 @@ Selected=
 /ALU.v=-1
 /ALU_CTRL.v=-1
 /CONTROL_UNIT.v=-1
-/instructions.list=-1
 /PC.v=-1
 /AND.v=-1
 /ADD.v=-1
@@ -65,6 +64,7 @@ Selected=
 /untitled1.awc=-1
 /untitled2.asdb=-1
 /untitled2.awc=-1
+/instructions.list=-1
 
 [Files.Data]
 .\src\REG.v=Verilog Source Code
@@ -81,9 +81,9 @@ Selected=
 .\src\AND.v=Verilog Source Code
 .\src\ADD.v=Verilog Source Code
 .\src\SHIFT_LEFT.v=Verilog Source Code
-
 .\src\SIGN_EXT.v=Verilog Source Code
 .\src\untitled1.asdb=Accelerated Waveform File
 .\src\untitled1.awc=Accelerated Waveform Configuration
 .\src\untitled2.asdb=Accelerated Waveform File
 .\src\untitled2.awc=Accelerated Waveform Configuration
+
