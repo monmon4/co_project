@@ -8,12 +8,16 @@ module REG (Read_data1, Read_data2, Read_reg1, Read_reg2, Reg_write, Write_reg, 
 	
 	reg [31:0] register[31:0];
 	
+	initial
+	 register[0] = 0;
+	
+	
 	assign Read_data1 = register[Read_reg1];
 	assign Read_data2 = register[Read_reg2];
 	
 	always @(posedge Clk)
 	begin
-		if (Reg_write)
+		if (Reg_write && Write_reg != 5'b00000)
 			register[Write_reg] <= Write_data;		
 	end	
 	

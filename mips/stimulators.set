@@ -7,11 +7,6 @@
     <rawdescription value="VAL:FRM:Drive:0101:&lt;= 0101:0:"/>
    </stimulator>
   </set>
-  <set name="ASDB Stimulators 1" active="1">
-   <stimulator>
-    <signal_path value="/SIGN_EXT/In"/>
-    <rawdescription value="CLK:FRM:Drive:100.000000;2;1;0;50;1:Clock:0:"/>
-   </stimulator>
-  </set>
+  <set name="ASDB Stimulators 1" active="1"/>
  </document>
 </XML>

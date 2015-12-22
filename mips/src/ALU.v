@@ -1,7 +1,7 @@
-module ALU(Out,Zero,In1,In2,Ctrl) ;
+module ALU (Out,Zero,In1,In2,Ctrl) ;
 	input[31:0]In1,In2;
 	output reg[31:0]Out;
-	input[3:0]Ctrl;
+	input[2:0]Ctrl;
 	output reg Zero;
 	parameter [2:0]	
 	add=3'b000,
@@ -12,7 +12,7 @@ module ALU(Out,Zero,In1,In2,Ctrl) ;
 	sll=3'b101,
 	beq=3'b110,
 	slt=3'b111;
- always @( Ctrl , In1 , In2 )
+ always @( Ctrl or In1 or In2 )
 	begin  
 		case(Ctrl)
 			add: begin

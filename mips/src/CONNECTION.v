@@ -1,6 +1,6 @@
-module CONNECTION (Clk);
+module CONNECTION ();
 	
-	input Clk;
+	reg Clk;
 	  // very important to specify the size of the wiresssss
 	wire[31:0] pc_inst; wire [5:0] inst_aluctrl, inst_control; wire[15:0] inst_signextend ;//instruction memory wires
 	wire[4:0]  inst_readreg1, inst_readreg2, inst_writereg;  //instruction memory wires
@@ -10,7 +10,7 @@ module CONNECTION (Clk);
 	wire reg_write, reg_dst;				   // register wires from control unit
 	wire[31:0] datamem_reg, regread1_alu, regread2_alu; //register wires
 	
-	wire[1:0] alu_op;			//alu control wires
+	wire[2:0] alu_op;			//alu control wires
 	
 	wire[31:0] mux_aluin2, signextend_alu;  //alu wires
 	wire alusrc, alu_and;				  //alu wires
@@ -35,26 +35,30 @@ module CONNECTION (Clk);
 	
 	ControlUnit control_unit (inst_control, reg_write, reg_dst, memread, memwrite, alu_op, alusrc, branch, mem_to_reg);
 	
-	MUX mux_inst_reg(mux_writereg, inst_readreg2, inst_writereg,reg_dst);
+	MUX_5 mux_inst_reg(mux_writereg, inst_readreg2, inst_writereg,reg_dst);
 	REG register(regread1_alu, regread2_alu, inst_readreg1, inst_readreg2,reg_write, mux_writereg, datamem_reg, Clk );
 	
 	ALU_CTRL alu_ctrl(alucontrol, inst_aluctrl, alu_op) ;
 	
-	MUX mux_reg_alu (mux_aluin2, regread2_alu, signextend_alu, alusrc );
+	MUX_32 mux_reg_alu (mux_aluin2, regread2_alu, signextend_alu, alusrc );
 	ALU alu (alu_mem, alu_and, regread1_alu, mux_aluin2, alucontrol) ;
 	
 	DATA_MEM data_mem(readdatamem_mux, alu_mem, regread2_alu, Clk, memread, memwrite);
-	MUX mux_mem_reg(datamem_reg, alu_mem, readdatamem_mux , mem_to_reg);
+	MUX_32 mux_mem_reg(datamem_reg, alu_mem, readdatamem_mux , mem_to_reg);
 	
 	/*PC Structure*/
 	SIGN_EXT sign_ext(signextend_alu,inst_signextend);
 	SHIFT_LEFT shift_left(shift_add, signextend_alu);
 	ADD add2(add2_pc, shift_add, add1_pc); 
 	ADD add1(add1_pc, pc_inst, 4);	
-	MUX mux_add_pc (mux_pc, add1_pc, add2_pc, and_muxpc );
-	PC pc(Clk, mux_pc, pc_inst);
+	MUX_32 mux_add_pc (mux_pc, add1_pc, add2_pc, and_muxpc );
+	PC pc(/*Clk*/, mux_pc, pc_inst);
 	AND and_gate(and_muxpc, branch, alu_and);
-												  
 	
+	initial
+		begin
+		Clk = 0;
+	#10 Clk=1;											  
+	   end
 
 endmodule

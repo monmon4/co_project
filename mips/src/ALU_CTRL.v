@@ -1,7 +1,7 @@
  module ALU_CTRL(Ctrl,Func,Aluop)  ;
 	input[5:0]Func;
 	input[2:0]Aluop;
-	output reg[3:0]Ctrl;
+	output reg[2:0]Ctrl;
 	parameter[2:0]
 	add=3'b000,
 	lw=3'b001,
@@ -35,7 +35,7 @@
 				Ctrl=add;
 			else if (Aluop==3'b011)
 				Ctrl=and1;
-			else
+			else if (Aluop==3'b110)
 				Ctrl=beq;
 		end
 					 

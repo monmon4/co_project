@@ -18,7 +18,7 @@ module DATA_MEM (Read_data, Address, Write_data, Clk, Mem_read, Mem_write);
 	
 	initial
 		begin
-			$readmemh("instructions.txt", a_file);
+			$readmemh("initial memory.txt", a_file);
 		end	
 
 endmodule

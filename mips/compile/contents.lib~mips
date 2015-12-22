@@ -1,4 +1,4 @@
-3481
+4462
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./../src/ADD.v" 1 ADD
@@ -19,6 +19,10 @@
 ~A 1 "./../src/INST_MEM.v" 2 INST_MEM
 ~M 1 "./../src/MUX.v" 2 MUX
 ~A 1 "./../src/MUX.v" 2 MUX
+~M 1 "./../src/MUX.v" 18 MUX_32
+~A 1 "./../src/MUX.v" 18 MUX_32
+~M 1 "./../src/MUX.v" 2 MUX_5
+~A 1 "./../src/MUX.v" 2 MUX_5
 ~M 1 "./../src/PC.v" 1 PC
 ~A 1 "./../src/PC.v" 1 PC
 ~M 1 "./../src/REG.v" 2 REG

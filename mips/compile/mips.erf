@@ -16,5 +16,5 @@ UPDATEPROGRESS 90
 UPDATEPROGRESS 100
 MESSAGE "$root top modules: inst_tb CONNECTION try_tb."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
 MESSAGE "done"
