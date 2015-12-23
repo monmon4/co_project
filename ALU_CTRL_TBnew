@@ -1,0 +1,32 @@
+module ALU_CTRL_tb;
+	reg [5:0]Func;
+	reg [2:0]Aluop;
+	wire [2:0]Ctrl;
+	ALU_CTRL U0 (.Func(Func),.Aluop(Aluop),.Ctrl(Ctrl));
+	initial
+		begin
+			Aluop=3'b000;
+			Func=6'b100000;	
+			 			
+			#70 Aluop=3'b000;
+			#0 Func=6'b100111;
+						 			
+			#70 Aluop=3'b001;
+			#0 Func=6'bxxxxxx;
+						
+			#70 Aluop=3'b010;
+			#0 Func=6'bxxxxxx;
+						
+			#70 Aluop=3'b011;
+			#0 Func=6'bxxxxxx;
+			
+			#70 Aluop=3'b000;
+			#0 Func=6'b000000;
+			
+			#70 Aluop=3'b100; 
+			#0 Func=6'bxxxxxx;
+			
+			#80 $finish;
+		end
+endmodule
+	
