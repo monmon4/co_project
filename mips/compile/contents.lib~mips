@@ -1,4 +1,4 @@
-5126
+5826
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./../src/ADD.v" 1 ADD
@@ -7,6 +7,8 @@
 ~A 1 "./../src/ALU.v" 1 ALU
 ~M 1 "./../src/ALU_CTRL.v" 1 ALU_CTRL
 ~A 1 "./../src/ALU_CTRL.v" 1 ALU_CTRL
+~M 3 "./../src/ALU.v" 76 ALU_tb
+~A 1 "./../src/ALU.v" 76 ALU_tb
 ~M 1 "./../src/AND.v" 1 AND
 ~A 1 "./../src/AND.v" 1 AND
 ~M 3 "./../src/CONNECTION.v" 1 CONNECTION
@@ -27,6 +29,8 @@
 ~A 1 "./../src/PC.v" 1 PC
 ~M 1 "./../src/REG.v" 2 REG
 ~A 1 "./../src/REG.v" 2 REG
+~M 3 "./../src/REG.v" 36 REG_tb
+~A 1 "./../src/REG.v" 36 REG_tb
 ~M 1 "./../src/SHIFT_LEFT.v" 1 SHIFT_LEFT
 ~A 1 "./../src/SHIFT_LEFT.v" 1 SHIFT_LEFT
 ~M 1 "./../src/SIGN_EXT.v" 2 SIGN_EXT

@@ -5,7 +5,7 @@ module INST_MEM (Instruction, Read_address);
 	output reg [31:0] Instruction;
 	
 	reg[7:0] the_file[159:0];
-	reg [31:0] to_assign;
+	
 	
 	 
 	
