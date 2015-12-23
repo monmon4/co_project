@@ -1,0 +1,44 @@
+module ALU_tb;
+	reg [31:0]In1,In2;
+	reg [2:0]Ctrl;
+	wire [31:0]Out;
+	wire Zero;
+	ALU U0(.In1(In1),.In2(In2),.Ctrl(Ctrl),.Out(Out),.Zero(Zero));
+	initial
+		begin
+			In1=5'b11101;		 //add 29+21
+			In2=5'b10101;
+			Ctrl=3'b000;
+			
+			#70 In1=5'b01100;	 //lw 12,11
+			#0 In2=5'b01011;
+			#0 Ctrl=3'b001;
+			
+			#70 In1=5'b00000;	//	add 0+3
+			#0 In2=5'b00011;
+			#0 Ctrl= 3'b000;
+			
+			#70 In1=5'b01100;	   // and1 
+			#0 In2=5'b01011;
+			#0 Ctrl= 3'b011;	
+			
+			#70 In1=5'b00101;  //nor1
+			#0 In2=5'b01001;
+			#0 Ctrl= 3'b100;	
+			
+			#70 In1=5'b00100;	// sll 4,7
+			#0 In2=5'b00111;
+			#0 Ctrl= 3'b101;
+			
+			#70 In1=5'b00001;	//beq 1,1
+			#0 In2=5'b00001;
+			#0 Ctrl= 3'b110;	  
+			
+			#70 In1=5'b00000;	//slt 0,3
+			#0 In2=5'b00011;
+			#0 Ctrl= 3'b111;
+			
+			#20 $finish	;
+		end
+endmodule
+	
