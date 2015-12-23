@@ -1,4 +1,4 @@
-5826
+7003
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./../src/ADD.v" 1 ADD
@@ -7,8 +7,8 @@
 ~A 1 "./../src/ALU.v" 1 ALU
 ~M 1 "./../src/ALU_CTRL.v" 1 ALU_CTRL
 ~A 1 "./../src/ALU_CTRL.v" 1 ALU_CTRL
-~M 3 "./../src/ALU.v" 76 ALU_tb
-~A 1 "./../src/ALU.v" 76 ALU_tb
+~M 3 "./../src/ALU.v" 73 ALU_tb
+~A 1 "./../src/ALU.v" 73 ALU_tb
 ~M 1 "./../src/AND.v" 1 AND
 ~A 1 "./../src/AND.v" 1 AND
 ~M 3 "./../src/CONNECTION.v" 1 CONNECTION
@@ -17,12 +17,18 @@
 ~A 1 "./../src/CONTROL_UNIT.v" 1 ControlUnit
 ~M 1 "./../src/DATA_MEM.v" 1 DATA_MEM
 ~A 1 "./../src/DATA_MEM.v" 1 DATA_MEM
+~M 3 "./../src/DATA_MEM.v" 36 DATA_MEM_tb
+~A 1 "./../src/DATA_MEM.v" 36 DATA_MEM_tb
 ~M 1 "./../src/INST_MEM.v" 2 INST_MEM
 ~A 1 "./../src/INST_MEM.v" 2 INST_MEM
 ~M 1 "./../src/MUX.v" 2 MUX
 ~A 1 "./../src/MUX.v" 2 MUX
 ~M 1 "./../src/MUX.v" 18 MUX_32
 ~A 1 "./../src/MUX.v" 18 MUX_32
+~M 3 "./../src/MUX3.v" 1 MUX_3_1
+~A 1 "./../src/MUX3.v" 1 MUX_3_1
+~M 3 "./../src/MUX3.v" 18 MUX_3x1_tb
+~A 1 "./../src/MUX3.v" 18 MUX_3x1_tb
 ~M 1 "./../src/MUX.v" 2 MUX_5
 ~A 1 "./../src/MUX.v" 2 MUX_5
 ~M 1 "./../src/PC.v" 1 PC

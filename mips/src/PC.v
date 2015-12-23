@@ -8,5 +8,5 @@ initial
 	Pco =0;
 	
 always @ (posedge Clk)
-	 Pco <= Pci;
+	#7 Pco <= Pci;
 endmodule

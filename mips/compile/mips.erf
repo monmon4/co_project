@@ -12,12 +12,14 @@ MESSAGE_SP VCP2113 "Module \$root found in current working library."
 MESSAGE_SP VCP2113 "Module inst_tb found in current working library."
 MESSAGE_SP VCP2113 "Module CONNECTION found in current working library."
 MESSAGE_SP VCP2113 "Module try_tb found in current working library."
+MESSAGE_SP VCP2113 "Module REG_tb found in current working library."
 MESSAGE_SP VCP2113 "Module ALU_tb found in current working library."
-UPDATEPROGRESS 86
-UPDATEPROGRESS 93
+MESSAGE_SP VCP2113 "Module DATA_MEM_tb found in current working library."
+MESSAGE_SP VCP2113 "Module MUX_3_1 found in current working library."
+MESSAGE_SP VCP2113 "Module MUX_3x1_tb found in current working library."
+UPDATEPROGRESS 90
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: REG_tb."
-MESSAGE "$root top modules: inst_tb CONNECTION try_tb REG_tb ALU_tb."
+MESSAGE "$root top modules: inst_tb CONNECTION try_tb REG_tb ALU_tb DATA_MEM_tb MUX_3_1 MUX_3x1_tb."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 MESSAGE "done"

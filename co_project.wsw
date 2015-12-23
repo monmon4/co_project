@@ -2,18 +2,22 @@
 TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\INST_MEM.v|]
 TemplateId=2
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\MUX.v|]
-TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\DATA_MEM.v|]
 TemplateId=2
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\SIGN_EXT.v|]
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\PC.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\CONNECTION.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\CONTROL_UNIT.v|]
 TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\ALU.v|]
 TemplateId=2
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\ALU_CTRL.v|]
 TemplateId=2
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\CONTROL_UNIT.v|]
-TemplateId=2
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\mips\src\PC.v|]
-TemplateId=2
 ActiveDocument=1
+[OPENDOC|Aldec.WaveFormASDB.7|.\mips\src/connections.awc|]
+TemplateId=0
+[OPENDOC|Aldec.WaveFormASDB.7|.\mips\src/reg tb.awc|]
+TemplateId=1
+[OPENDOC|Aldec.WaveFormASDB.7|.\mips\src/data mem tb.awc|]
+TemplateId=1

@@ -12,3 +12,4 @@
 .\src\ADD.v
 .\src\SHIFT_LEFT.v
 .\src\SIGN_EXT.v
+.\src\MUX3.v

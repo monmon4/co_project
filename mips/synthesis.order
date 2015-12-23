@@ -12,3 +12,4 @@ i<>.\src\AND.v
 i<>.\src\ADD.v
 i<>.\src\SHIFT_LEFT.v
 i<>.\src\SIGN_EXT.v
+i<>.\src\MUX3.v

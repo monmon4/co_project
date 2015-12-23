@@ -33,7 +33,7 @@ module REG (Read_data1, Read_data2, Read_reg1, Read_reg2, Reg_write, Write_reg, 
 	
 endmodule
 
-module REG_tb();
+module REG_tb;
 	 
 	
 	reg [4:0] read_reg1, read_reg2, write_reg;

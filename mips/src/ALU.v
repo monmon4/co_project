@@ -51,13 +51,10 @@ module ALU (Out,Zero,In1,In2,Ctrl) ;
 					Zero=0;
 				end
 			beq: begin
-					if ((In1-In2)==0)	
+				if (In1==In2)
 						begin	
 							Out=0;
-				if(Out==0)
-					Zero=1;
-				else
-					Zero=0;
+							Zero=1;
 						end
 				end
 			slt: begin
@@ -73,7 +70,7 @@ module ALU (Out,Zero,In1,In2,Ctrl) ;
 endmodule
 
 
-module ALU_tb();
+module ALU_tb;
 	reg [31:0]In1,In2;
 	reg [2:0]Ctrl;
 	wire [31:0]Out;

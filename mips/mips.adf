@@ -69,6 +69,10 @@ Selected=
 /reg tb.awc=-1
 /alu tb.asdb=-1
 /alu tb.awc=-1
+/MUX3.v=-1
+/data mem tb.awc=-1
+/untitled.awc=-1
+/connections.awc=-1
 
 [Files.Data]
 .\src\REG.v=Verilog Source Code
@@ -95,3 +99,7 @@ Selected=
 .\src\reg tb.asdb=Accelerated Waveform File
 .\src\alu tb.asdb=Accelerated Waveform File
 .\src\alu tb.awc=Accelerated Waveform Configuration
+.\src\MUX3.v=Verilog Source Code
+.\src\data mem tb.awc=Accelerated Waveform Configuration
+.\src\untitled.awc=Accelerated Waveform Configuration
+.\src\connections.awc=Accelerated Waveform Configuration
