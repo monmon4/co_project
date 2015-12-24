@@ -52,10 +52,16 @@ module ALU (Out,Zero,In1,In2,Ctrl) ;
 				end
 			beq: begin
 				if (In1==In2)
-						begin	
-							Out=0;
-							Zero=1;
-						end
+					begin	
+						Out=0;
+						Zero=1;
+					end
+				else
+					begin
+						Out=0;
+						Zero=0;
+					end
+					
 				end
 			slt: begin
 				if(In1<In2)	Out=1;

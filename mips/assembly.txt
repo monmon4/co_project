@@ -1,0 +1,8 @@
+addi $s1,$zero,4
+addi $s2,$zero,4
+beq $s1,$s2,label
+add $s1,$s1,$s2
+label: addi $s1,$s1,4
+and $s4,$s1,$s2
+sll $s3,$s2,$s1
+slt $s5,$s2,$s1

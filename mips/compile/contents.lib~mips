@@ -1,4 +1,4 @@
-7003
+7259
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./../src/ADD.v" 1 ADD
@@ -7,8 +7,8 @@
 ~A 1 "./../src/ALU.v" 1 ALU
 ~M 1 "./../src/ALU_CTRL.v" 1 ALU_CTRL
 ~A 1 "./../src/ALU_CTRL.v" 1 ALU_CTRL
-~M 3 "./../src/ALU.v" 73 ALU_tb
-~A 1 "./../src/ALU.v" 73 ALU_tb
+~M 3 "./../src/ALU.v" 79 ALU_tb
+~A 1 "./../src/ALU.v" 79 ALU_tb
 ~M 1 "./../src/AND.v" 1 AND
 ~A 1 "./../src/AND.v" 1 AND
 ~M 3 "./../src/CONNECTION.v" 1 CONNECTION

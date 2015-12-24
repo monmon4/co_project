@@ -6,8 +6,8 @@
 	add=3'b000,
 	lw=3'b001,
 	sw=3'b010,
-	and1=3'b011,
-	nor1=3'b100,
+	andi=3'b011,
+	nori=3'b100,
 	sll=3'b101,
 	beq=3'b110,
 	slt=3'b111;
@@ -23,8 +23,8 @@
 				begin
 					case(Func)
 						f_add : Ctrl=add;
-						f_and : Ctrl=and1;
-						f_nor : Ctrl=nor1;
+						f_and : Ctrl=andi;
+						f_nor : Ctrl=nori;
 						f_sll : Ctrl=sll;
 						f_slt : Ctrl=slt;
 					endcase
@@ -34,7 +34,7 @@
 			else if (Aluop==3'b010)
 				Ctrl=add;
 			else if (Aluop==3'b011)
-				Ctrl=and1;
+				Ctrl=andi;
 			else if (Aluop==3'b110)
 				Ctrl=beq;
 		end
