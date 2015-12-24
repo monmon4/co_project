@@ -21,7 +21,7 @@ module INST_MEM (Instruction, Read_address);
 	
 	initial
 		begin
-			$readmemh("hex.txt", the_file);
+			$readmemh("instructions.list", the_file);
 		end		
 
 endmodule

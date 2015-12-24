@@ -2,20 +2,6 @@ MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
 UPDATEPROGRESS 35
-MESSAGE_SP VCP2113 "Module INST_MEM found in current working library."
-MESSAGE_SP VCP2113 "Module ControlUnit found in current working library."
-MESSAGE_SP VCP2113 "Module MUX3_5 found in current working library."
-MESSAGE_SP VCP2113 "Module REG found in current working library."
-MESSAGE_SP VCP2113 "Module ALU_CTRL found in current working library."
-MESSAGE_SP VCP2113 "Module MUX_32 found in current working library."
-MESSAGE_SP VCP2113 "Module ALU found in current working library."
-MESSAGE_SP VCP2113 "Module DATA_MEM found in current working library."
-MESSAGE_SP VCP2113 "Module MUX3_32 found in current working library."
-MESSAGE_SP VCP2113 "Module SHIFT_LEFT found in current working library."
-MESSAGE_SP VCP2113 "Module SIGN_EXT found in current working library."
-MESSAGE_SP VCP2113 "Module ADD found in current working library."
-MESSAGE_SP VCP2113 "Module PC found in current working library."
-MESSAGE_SP VCP2113 "Module AND found in current working library."
 MESSAGE "Pass 2. Processing instantiations."
 UPDATEPROGRESS 45
 MESSAGE "Pass 3. Processing behavioral statements."
@@ -24,6 +10,7 @@ MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 MESSAGE_SP VCP2113 "Module inst_tb found in current working library."
+MESSAGE_SP VCP2113 "Module CONNECTION found in current working library."
 MESSAGE_SP VCP2113 "Module try_tb found in current working library."
 MESSAGE_SP VCP2113 "Module REG_tb found in current working library."
 MESSAGE_SP VCP2113 "Module ALU_tb found in current working library."
@@ -32,23 +19,8 @@ MESSAGE_SP VCP2113 "Module MUX_3_1 found in current working library."
 MESSAGE_SP VCP2113 "Module MUX_3x1_tb found in current working library."
 MESSAGE_SP VCP2113 "Module MUX3 found in current working library."
 MESSAGE_SP VCP2113 "Module MUX_5 found in current working library."
-UPDATEPROGRESS 81
-UPDATEPROGRESS 82
-UPDATEPROGRESS 83
-UPDATEPROGRESS 85
-UPDATEPROGRESS 86
-UPDATEPROGRESS 87
-UPDATEPROGRESS 88
 UPDATEPROGRESS 90
-UPDATEPROGRESS 91
-UPDATEPROGRESS 92
-UPDATEPROGRESS 93
-UPDATEPROGRESS 95
-UPDATEPROGRESS 96
-UPDATEPROGRESS 97
-UPDATEPROGRESS 98
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: CONNECTION."
 MESSAGE "$root top modules: inst_tb CONNECTION try_tb REG_tb ALU_tb DATA_MEM_tb MUX_3_1 MUX_3x1_tb MUX3 MUX_5."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."

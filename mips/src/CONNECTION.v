@@ -49,7 +49,7 @@ module CONNECTION ();
 	assign inst_aluctrl = temp[5:0];
 	assign inst_shiftleft = temp[25:0];	//for jal
 	
-	ControlUnit control_unit (inst_control, inst_aluctrl, reg_write, reg_dst, memread, memwrite, alu_op, alusrc, branch, mem_to_reg,jump);
+	ControlUnit control_unit (inst_control, inst_aluctrl, reg_write, reg_dst, memread, memwrite, alu_op, alusrc, branch, mem_to_reg, jump);
 	
 	MUX3_5 mux_inst_reg(mux_writereg, inst_readreg2, inst_writereg,31,reg_dst);
 	REG register(regread1_alu, regread2_alu, inst_readreg1, inst_readreg2,reg_write, mux_writereg, datamem_reg, Clk );
@@ -63,7 +63,7 @@ module CONNECTION ();
 	MUX3_32 mux_mem_reg(datamem_reg, alu_mem, readdatamem_mux, add1_pc, mem_to_reg);
 	
 	/*for jr and jal*/
-	SHIFT_LEFT shift_forjump( jump_address1, inst_shiftleft);
+	SHIFT_LEFT_JUMP shift_forjump(jump_address1, inst_shiftleft);
 	assign jump_address2=add1_pc[31:26];
 	always @(jump_address1 or jump_address2)
 		begin

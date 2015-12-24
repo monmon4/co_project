@@ -1,4 +1,4 @@
-9599
+9944
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 1 "./../src/ADD.v" 1 ADD
@@ -45,6 +45,8 @@
 ~A 1 "./../src/REG.v" 36 REG_tb
 ~M 1 "./../src/SHIFT_LEFT.v" 1 SHIFT_LEFT
 ~A 1 "./../src/SHIFT_LEFT.v" 1 SHIFT_LEFT
+~M 3 "./../src/SHIFT_LEFT.v" 13 SHIFT_LEFT_JUMP
+~A 1 "./../src/SHIFT_LEFT.v" 13 SHIFT_LEFT_JUMP
 ~M 1 "./../src/SIGN_EXT.v" 2 SIGN_EXT
 ~A 1 "./../src/SIGN_EXT.v" 2 SIGN_EXT
 ~M 3 "./../src/INST_MEM.v" 21 inst_tb

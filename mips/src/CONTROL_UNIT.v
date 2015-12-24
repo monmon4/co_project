@@ -131,7 +131,7 @@ module ControlUnit (Op, Func_jr, RegWr, RegDst, MemRead, MemWrite, Aluop, Alusrc
 	reg [4:0] shamt;
 	//reg [3:0] AluControl;
 	
-	always @(Op)
+	always @(Op or Func_jr)
 		begin
 			if(Op ==6'b000000 ) //R-Type	 + Jr
 				begin
@@ -224,7 +224,7 @@ module ControlUnit (Op, Func_jr, RegWr, RegDst, MemRead, MemWrite, Aluop, Alusrc
 					//AluControl=4'b0010;
 					Alusrc=1'bx;
 					Br=1'b1;
-					MemToReg=2'b01;
+					MemToReg=2'b10;
 					Jump=2'b01;
 				end
 				
