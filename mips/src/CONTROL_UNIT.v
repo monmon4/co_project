@@ -1,4 +1,4 @@
-module ControlUnit (Op, RegWr, RegDst, MemRead, MemWrite, Aluop, Alusrc, Br, MemToReg);
+/*module ControlUnit (Op, RegWr, RegDst, MemRead, MemWrite, Aluop, Alusrc, Br, MemToReg);
 	input [5:0] Op;
 	//input  Zero;
 	
@@ -100,10 +100,11 @@ module ControlUnit (Op, RegWr, RegDst, MemRead, MemWrite, Aluop, Alusrc, Br, Mem
 				end
 		end
 endmodule
+*/
 
-
-/*module ControlUnit (Op, RegWr, RegDst, MemRead, MemWrite, Aluop, Alusrc, Br, MemToReg,Jump);
+module ControlUnit (Op, Func_jr, RegWr, RegDst, MemRead, MemWrite, Aluop, Alusrc, Br, MemToReg, Jump);
 	input [5:0] Op;
+	input [5:0] Func_jr;
 	//input  Zero;
 	
 	output [2:0] Aluop;
@@ -120,13 +121,13 @@ endmodule
 	reg [2:0] Aluop;
 	//reg [3:0] AluControl;
 	reg RegWr;
-	reg RegDst;
+	reg [1:0]RegDst;
 	reg MemRead;
 	reg MemWrite;
-	reg MemToReg;
+	reg [1:0]MemToReg;
 	reg Alusrc;
 	reg Br;
-	reg Jump;
+	reg [1:0]Jump;
 	reg [4:0] shamt;
 	//reg [3:0] AluControl;
 	
@@ -142,8 +143,11 @@ endmodule
             		//AluControl=4'b0010;
           			Alusrc=1'b0;
           			Br=1'b0;
-		      		MemToReg=1'b0; 
-					Jump= 2'b10;
+		      		MemToReg=2'b00;
+					if(Func_jr == 6'b001000)
+						Jump= 2'b10;
+					else 
+						Jump= 2'b00;
 				end 
 			else if(Op==6'b100011) //lw
 				begin
@@ -155,7 +159,7 @@ endmodule
 			       	//AluControl=4'b0010;
 				  	Alusrc=1'b1;
 				 	Br=1'b0;
-					MemToReg=1'b1;
+					MemToReg=2'b01;
 					Jump=2'b00;
 				end 	
 			else if(Op==6'b101011) //sw
@@ -168,7 +172,7 @@ endmodule
 					//AluControl=4'b0010;
 					Alusrc=1'b1;
 					Br=1'b0;
-					MemToReg=1'b0;
+					MemToReg=2'b00;
 					Jump=2'b00;
 				end
 			else if(Op==6'b001100)	 //andi	
@@ -181,7 +185,7 @@ endmodule
 					//AluControl=4'b0010;
 					Alusrc=1'b1;
 					Br=1'b0;
-					MemToReg=1'b0;
+					MemToReg=2'b00;
 					Jump=2'b00;
 				end
 			else if(Op==6'b001000) //addi	
@@ -194,7 +198,7 @@ endmodule
 					//AluControl=4'b0010;
 					Alusrc=1'b1;
 					Br=1'b0;
-					MemToReg=1'b0;
+					MemToReg=2'b00;
 					Jump=2'b00;
 				end	
 			else if(Op==6'b000100) //beq
@@ -203,14 +207,14 @@ endmodule
 					RegWr=1'b0;
 					MemRead=1'b0;
 					MemWrite=1'b0;
-					Aluop=3'b100;
+					Aluop=3'b110;
 					//AluControl=4'b0010;
-					Alusrc=1'b1;
+					Alusrc=1'b0;
 					Br=1'b1;
-					MemToReg=1'b0;
+					MemToReg=2'b00;
 					Jump=2'b00;
 				end	
-			else if(op==6000011'b) 					   //jal
+			else if(Op==6'b000011) 					   //jal
 				begin 
 					RegDst=2'b10;
 					RegWr=1'bx;
@@ -220,9 +224,9 @@ endmodule
 					//AluControl=4'b0010;
 					Alusrc=1'bx;
 					Br=1'b1;
-					MemToReg=1'b0;
+					MemToReg=2'b01;
 					Jump=2'b01;
 				end
 				
 		end
-endmodule*/
+endmodule

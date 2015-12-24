@@ -13,9 +13,10 @@
 	slt=3'b111;
 	parameter[5:0]
 	f_add= 6'b100000,
-	f_and=	6'b100010,
-	f_nor=	6'b100100,
-	f_sll=	6'b000000,
+	f_and= 6'b100010,
+	f_nor= 6'b100100,
+	f_sll= 6'b000000,
+	f_jr = 6'b001000,
 	f_slt=	6'b101010;
 	always@(Func or Aluop)
 		begin
@@ -27,6 +28,7 @@
 						f_nor : Ctrl=nori;
 						f_sll : Ctrl=sll;
 						f_slt : Ctrl=slt;
+						f_jr  : Ctrl=3'bxxx;
 					endcase
 				end
 			else if(Aluop==3'b001)
