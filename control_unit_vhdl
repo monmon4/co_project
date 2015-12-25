@@ -1,0 +1,95 @@
+  library ieee;  
+use ieee.std_logic_1164.all;  
+
+
+ENTITY ControlUnit IS
+	Port (Op: IN std_logic_vector(5 DOWNTO 0); RegWr, RegDst: OUT std_logic_vector(1 DOWNTO 0); MemRead, MemWrite, Alusrc, Br, MemToReg: OUT std_logic; Jump: OUT std_logic_vector(1 DOWNTO 0) ; Aluop: OUT std_logic_vector(2 DOWNTO 0));				 
+End ControlUnit ;
+
+ARCHITECTURE CU OF ControlUnit IS
+BEGIN
+	process(Op)	
+	begin
+	
+	if Op ="000000" then --R-Type	 + Jr
+			RegDst<="01";
+			RegWr<="01";
+			MemRead<='0';
+       		MemWrite<='0';
+			Aluop<="000";
+			--AluControl=4'b0010;
+      		Alusrc<='0';
+			Br<='0';
+			MemToReg<='0'; 
+			Jump<="10";
+	elsif Op="100011" then--lw
+			RegDst<="00";
+		    RegWr<="01";
+			MemRead<='1';
+			MemWrite<='0';
+		  	Aluop<="001";
+			--AluControl=4'b0010;
+		  	Alusrc<='1';
+			Br<='0';
+			MemToReg<='1';
+			Jump<="00";
+	elsif Op="101011" then--sw
+			RegDst<="00";
+			RegWr<="01";
+			MemRead<='0';
+			MemWrite<='1';	
+			Aluop<="001";
+			--AluControl=4'b0010;
+			Alusrc<='1';
+			Br<='0';
+			MemToReg<='0';
+			Jump<="00";
+	elsif Op="001100"	 then--andi	
+			RegDst<="00";
+			RegWr<="01";
+			MemRead<='0';
+			MemWrite<='0';
+			Aluop<="011";
+			--AluControl=4'b0010;
+			Alusrc<='1';
+			Br<='0';
+			MemToReg<='0';
+			Jump<="00";
+	elsif Op="001000" then--addi	
+			RegDst<="00";
+			RegWr<="01";
+			MemRead<='0';
+			MemWrite<='0';
+			Aluop<="010";
+			--AluControl=4'b0010;
+			Alusrc<='1';
+			Br<='0';
+			MemToReg<='0';
+			Jump<="00";	
+	elsif Op="000100" then--beq	
+			RegDst<="--" ;
+			RegWr<="00";
+			MemRead<='0';
+			MemWrite<='0';
+			Aluop<="100";
+			--AluControl=4'b0010;
+			Alusrc<='1';
+			Br<='1';
+			MemToReg<='0';
+			Jump<="00";
+	else 					   --jal
+		
+			RegDst<="10";
+			RegWr<= "--";
+			MemRead<='0';
+			MemWrite<='0';
+			Aluop<="---";
+			--AluControl=4'b0010;
+			Alusrc<='-';
+			Br<='1';
+			MemToReg<='0';
+			Jump<="01";
+	end if;	
+	end process;
+	end CU;
+	
