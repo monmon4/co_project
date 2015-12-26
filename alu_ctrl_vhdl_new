@@ -1,0 +1,41 @@
+ library ieee;  
+use ieee.std_logic_1164.all;  
+
+entity ALU_CTRL is
+	port (Func : in std_logic_vector (5 downto 0);Aluop : in std_logic_vector(2 downto 0); Ctrl : out std_logic_vector(2 downto 0));
+
+ end entity ALU_CTRL;
+
+
+ architecture arch2 of ALU_CTRL is
+ begin 
+	 process (Func,Aluop)
+	 begin
+		 
+			if Aluop="000" then
+					case Func is
+						when "100000" =>  Ctrl<="000";	--add
+						when "100010"=> Ctrl <="011";	--and
+						when "100100"=>	  Ctrl<="100";	--nor
+						when "000000" => Ctrl<="101";  --sll
+						when "001000" =>null;  --jr
+						
+						when "101010" => Ctrl<="111"; --slt
+						
+						
+						when others => null;
+						
+					end case;
+				
+			elsif Aluop="001"	then  --lw_sw
+				Ctrl<="001";
+			elsif Aluop="010" then 	  --addi
+				Ctrl<="000";
+			elsif Aluop="011"then	  --andi
+				Ctrl<="011";
+			elsif Aluop="110" then	  --beq
+				Ctrl<="110"; 
+				end if;
+		end	process;
+		end architecture;
+		
