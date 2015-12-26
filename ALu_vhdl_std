@@ -1,0 +1,78 @@
+library ieee;  
+use ieee.std_logic_1164.all;  
+use IEEE.NUMERIC_STD.ALL; 
+
+
+
+ 
+ENTITY ALU IS
+	PORT(In1,In2 : IN std_logic_vector(31 downto 0); Ctrl :IN std_logic_vector(2 downto 0); AluOut : OUT std_logic_vector(31 downto 0); Zero :OUT std_logic); 
+END ALU;
+
+
+ARCHITECTURE  arch1 OF ALU IS 
+
+signal a :std_logic_vector (31 downto 0);
+
+BEGIN
+	PROCESS (Ctrl, In1,In2)
+	 variable z :integer ;
+	 variable x : integer  ;
+	 
+
+	begin
+		CASE Ctrl IS
+		WHEN "000" =>			   	   --add  
+				a<=std_logic_vector(unsigned(In1)+unsigned(In2));
+				
+				AluOut<= a;
+				Zero<='0';
+				
+		WHEN "001"=>			 	  --lw_sw
+				a<=std_logic_vector(unsigned(In1)+ unsigned(In2));
+				
+				AluOut<= a;
+				Zero<='0';
+								 
+		WHEN "010" =>					--and1 							
+				AluOut<= In1 and In2;
+				Zero<='0';
+				
+		WHEN "011" =>			   	  --nor1
+				AluOut<= In1 nor In2;
+				Zero<='0';
+				
+		WHEN "100" =>				   --sll
+		z := to_integer(unsigned (In1));
+		x := to_integer(unsigned(In2));
+				  
+				z :=  z*(2**x);
+				Zero<='0';
+				
+		WHEN "101" =>				   --beq
+		z := to_integer(unsigned(In1));
+		x := to_integer(unsigned(In2));
+		
+					IF z=x THEN		
+						AluOut<="00000000000000000000000000000000";
+						Zero<='1';
+					ELSE 
+				a<=std_logic_vector(unsigned(In1)- unsigned(In2));
+				
+				AluOut<= a;
+					AluOut<= a;
+					Zero<='0';
+					END IF ;
+				
+		WHEN "111" =>				  --slt
+				IF In1<In2 THEN
+					AluOut<="00000000000000000000000000000001";
+				ELSE
+					AluOut<="00000000000000000000000000000000";
+				END IF;
+				Zero<='0';	   
+		WHEN OTHERS => null;
+		END CASE ;
+	END PROCESS	;
+END arch1;
+
